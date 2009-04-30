@@ -1,8 +1,44 @@
 body {
     color: #383838;
-    background: #06BD86;
 }
 
-div#content { background: #fff; width: 480px; margin: 0 auto; padding: 1em; border: 5px solid #11F7B1; }
+div#content { background: #fff; }
 
-a { color: #11F7B1; }
+h1#title {
+    font-size: 32px;
+    text-align: center;
+}
+
+p#about { text-align: center; font-weight: bold; }
+span.pre { font-family:  }
+
+.pagination { text-align: center; }
+
+ul#tweets_list {
+    list-style: none;
+}
+
+ul#tweets_list li {
+    margin:.5em 0;
+    padding-bottom: .25em;
+    border-bottom: 1px solid #ccc;
+}
+
+a.user { font-size: larger; }
+
+div.text {
+    font-size: large;
+}
+
+div.info { margin-bottom: 1em; }
+
+div.info img {
+  margin: 0 8px 0 0;
+  padding: 4px;
+  border: 1px solid #D9E0E6;
+  border-bottom-color: #C8CDD2;
+  border-right-color: #C8CDD2;
+  background: #fff;
+}
+
+div.actions { text-align: right; }

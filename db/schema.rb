@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20090430010644) do
     t.integer  "status_id"
     t.string   "source"
     t.string   "iso_language_code"
-    t.string   "status_created_at"
+    t.datetime "status_created_at"
     t.string   "profile_image_url"
     t.datetime "created_at"
     t.datetime "updated_at"

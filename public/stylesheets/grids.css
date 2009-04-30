@@ -1,0 +1,216 @@
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_10 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 480px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10 {
+	display:inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_10 .grid_1 {
+	width:28px;
+}
+
+.container_10 .grid_2 {
+	width:76px;
+}
+
+.container_10 .grid_3 {
+	width:124px;
+}
+
+.container_10 .grid_4 {
+	width:172px;
+}
+
+.container_10 .grid_5 {
+	width:220px;
+}
+
+.container_10 .grid_6 {
+	width:268px;
+}
+
+.container_10 .grid_7 {
+	width:316px;
+}
+
+.container_10 .grid_8 {
+	width:364px;
+}
+
+.container_10 .grid_9 {
+	width:412px;
+}
+
+.container_10 .grid_10 {
+	width:460px;
+}
+
+
+
+/* Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_10 .prefix_1 {
+	padding-left:48px;
+}
+
+.container_10 .prefix_2 {
+	padding-left:96px;
+}
+
+.container_10 .prefix_3 {
+	padding-left:144px;
+}
+
+.container_10 .prefix_4 {
+	padding-left:192px;
+}
+
+.container_10 .prefix_5 {
+	padding-left:240px;
+}
+
+.container_10 .prefix_6 {
+	padding-left:288px;
+}
+
+.container_10 .prefix_7 {
+	padding-left:336px;
+}
+
+.container_10 .prefix_8 {
+	padding-left:384px;
+}
+
+.container_10 .prefix_9 {
+	padding-left:432px;
+}
+
+
+
+/* Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_10 .suffix_1 {
+	padding-right:48px;
+}
+
+.container_10 .suffix_2 {
+	padding-right:96px;
+}
+
+.container_10 .suffix_3 {
+	padding-right:144px;
+}
+
+.container_10 .suffix_4 {
+	padding-right:192px;
+}
+
+.container_10 .suffix_5 {
+	padding-right:240px;
+}
+
+.container_10 .suffix_6 {
+	padding-right:288px;
+}
+
+.container_10 .suffix_7 {
+	padding-right:336px;
+}
+
+.container_10 .suffix_8 {
+	padding-right:384px;
+}
+
+.container_10 .suffix_9 {
+	padding-right:432px;
+}
+
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}

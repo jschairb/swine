@@ -1,13 +1,14 @@
 <html>
   <head>
     <title>I Don't Dig On Swine Flu: A Twitter Mashup</title>
-    <%= stylesheet_link_tag "styles" %>
+    <%= stylesheet_link_tag "reset", "grids", "text", "styles" %>
+    <%= javascript_include_tag "jquery", "jquery.timeago", "application" %>
   </head>
   <body>
-    <div id="content">
-      <h1>I Don't Dig On Swine Flu</h1>
+    <div id="content" class="container_10">
+      <h1 id="title">I Don't Dig On Swine Flu</h1>
       <%= @content_for_layout %>
+      <%= image_tag "powered-by-twitter-sig.gif" %>
     </div>
-    <%= image_tag "powered-by-twitter-sig.gif" %>
   </body>
 </html>
