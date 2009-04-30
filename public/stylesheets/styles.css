@@ -1,0 +1,8 @@
+body {
+    color: #383838;
+    background: #06BD86;
+}
+
+div#content { background: #fff; width: 480px; margin: 0 auto; padding: 1em; border: 5px solid #11F7B1; }
+
+a { color: #11F7B1; }

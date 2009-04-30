@@ -1,0 +1,2 @@
+class JulesController < ApplicationController
+end

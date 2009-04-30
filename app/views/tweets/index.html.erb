@@ -1,0 +1,34 @@
+<p>Search Criteria: "#swineflu OR 'swine flu' OR h1n1"</p>
+
+<%= will_paginate @tweets %>
+
+<ul>
+  <% @tweets.each do |tweet|-%>
+    <li>
+      <div class="info">
+        <%= image_tag tweet.profile_image_url, :size => "48x48" %>
+        <%= link_to h(tweet.from_user), "http://twitter.com/#{h(tweet.from_user)}" %>
+      </div>
+      
+      <div class="text"><%= URI.unescape(tweet.text) %></div>
+
+      <div class="meta">
+        <% if tweet.to_user.present? -%>
+          to <%= link_to h(tweet.to_user), "http://twitter.com/#{h(tweet.to_user)}" %>
+        <% end -%>
+
+        <span class="created_at">at <%= tweet.status_created_at %></span>
+        <span class="client">from <%= CGI.unescapeHTML tweet.source %></span>
+      </div>
+
+      <div class="actions">
+        <%= link_to "View Original", 
+                    "http://twitter.com/#{h(tweet.from_user)}/statuses/#{h(tweet.status_id)}"%>
+        <%= link_to "Reply", "http://twitter.com/home?status=@#{h(tweet.from_user)} &in_reply_to_status_id=#{h(tweet.status_id)}&in_reply_to=#{h(tweet.from_user)}" %>
+        <%= link_to "ReTweet", "http://twitter.com/home?status=RT @#{h(tweet.from_user)} #{tweet.text}" %>
+      </div>
+    </li>
+  <% end -%>
+</ul>
+
+<%= will_paginate @tweets %>
