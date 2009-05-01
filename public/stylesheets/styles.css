@@ -30,6 +30,10 @@ div.text {
     font-size: large;
 }
 
+li.authority div.text {
+    color: #990000;
+}
+
 div.info { margin-bottom: 1em; }
 
 div.info img {

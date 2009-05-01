@@ -1,3 +1,9 @@
-# Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  AUTHORITY = %w(cdcemergency whonews healthmap)
+
+  def tweet_class(user)
+    status = "tweet"
+    status << " authority" if AUTHORITY.include?(user)
+    return status
+  end
 end

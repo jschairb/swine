@@ -6,7 +6,7 @@
 
 <ul id="tweets_list">
   <% @tweets.each do |tweet|-%>
-    <li>
+    <li class="<%= tweet_class(h(tweet.from_user)) %>">
       <div class="info">
         <div class="grid_2 alpha">
           <%= image_tag tweet.profile_image_url, :size => "48x48" %>
