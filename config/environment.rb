@@ -15,6 +15,7 @@ Rails::Initializer.run do |config|
 
   config.gem 'mislav-will_paginate', :version => '2.3.8', :source => "http://gems.github.com",
                                      :lib => "will_paginate"
+  config.gem 'javan-whenever', :lib => false, :source => 'http://gems.github.com'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

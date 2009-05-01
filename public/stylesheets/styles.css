@@ -42,3 +42,5 @@ div.info img {
 }
 
 div.actions { text-align: right; }
+
+div#footer { margin: 1em 0; text-align: center; }
