@@ -15,17 +15,12 @@ def add_results(results)
 end
 
 last_update = Tweet.maximum(:status_id)
-
 results = Twitter::Search.new(SEARCH_CRITERIA).per_page(100).since(last_update).fetch
-
 add_results(results["results"])
 
 while results.next_page =~ /page=(\d+)/
-
   sleep 1
   max_id = results["results"].first.id
   results = Twitter::Search.new(SEARCH_CRITERIA).per_page(100).max(max_id).since(last_update).page($1).fetch
   add_results(results["results"])
-
 end
-

@@ -12,7 +12,7 @@
           <%= image_tag tweet.profile_image_url, :size => "48x48" %>
         </div>
         <div class="grid_8 omega">
-          <%= link_to h(tweet.from_user), "http://twitter.com/#{h(tweet.from_user)}", 
+          <%= link_to h(tweet.from_user), twitter_user_url(h(tweet.from_user)), 
                                           :class => "user" %>
           <div class="meta">
             <span class="created_at"> 
@@ -25,7 +25,7 @@
 
           <% if tweet.to_user.present? -%>
             <div class="response">
-              in response to <%= link_to h(tweet.to_user), "http://twitter.com/#{h(tweet.to_user)}" %> 
+              in response to <%= link_to h(tweet.to_user), twitter_user_url(h(tweet.to_user)) %> 
             </div>
           <% end -%>
 
@@ -36,10 +36,9 @@
       <div class="text"><%= auto_link(URI.unescape(tweet.text)) %></div>
 
       <div class="actions">
-        <%= link_to "Original", 
-                    "http://twitter.com/#{h(tweet.from_user)}/statuses/#{h(tweet.status_id)}"%>
-        <%= link_to "Reply", "http://twitter.com/home?status=@#{h(tweet.from_user)} &in_reply_to_status_id=#{h(tweet.status_id)}&in_reply_to=#{h(tweet.from_user)}" %>
-        <%= link_to "ReTweet", "http://twitter.com/home?status=RT @#{h(tweet.from_user)} #{tweet.text}" %>
+        <%= link_to "Original", twitter_status_url(h(tweet.from_user), h(tweet.status_id)) %>
+        <%= link_to "Reply", twitter_reply_url(h(tweet.from_user), h(tweet.status_id)) %>
+        <%= link_to "ReTweet", twitter_retweet_url(h(tweet.from_user), tweet.text) %>
       </div>
     </li>
   <% end -%>
