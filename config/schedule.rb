@@ -16,5 +16,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 2.minutes do 
-  command "/usr/bin/ruby lib/twupdatr.rb"
+  command "/usr/bin/ruby /home/deploy/swine/current/lib/twupdatr.rb"
 end
